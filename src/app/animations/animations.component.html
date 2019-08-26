@@ -1,0 +1,18 @@
+<div class="jumbotron text-center">
+  <h1>Animations</h1>
+</div>
+<div class="animations">
+  <div>
+    <div [@shape]="shape" class="my-container mb-3">
+      <p>{{ shape }}!</p>
+    </div>
+  </div>
+</div>
+<div class="shape-selector">
+  <div class="btn-group" role="group" aria-label="shape-selector">
+      <button (click)="changeShape('SQUARE')" type="button" class="btn btn-primary">Square</button>
+      <button (click)="changeShape('CIRCLE')" type="button" class="btn btn-success">Circle</button>
+      <button (click)="changeShape('RECTANGLE')" type="button" class="btn btn-danger">Rectangle</button>
+      <button (click)="changeShape('DOT')" type="button" class="btn btn-warning">Dot</button>
+    </div>
+</div>

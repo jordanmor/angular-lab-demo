@@ -1,0 +1,20 @@
+<div>
+  <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+    <input type="text" style="display:none" 
+    [(ngModel)]="person.id" id="personId" name="id" #id="ngModel" required>
+    <div>
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control"
+      [(ngModel)]="person.firstName" id="firstName" name="firstName" #firstName="ngModel" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control"
+      [(ngModel)]="person.lastName" id="lastName" name="lastName" #lastName="ngModel" required>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+
+  </form>
+</div>

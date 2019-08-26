@@ -1,0 +1,14 @@
+<div class="jumbotron text-center">
+  <h1>Coding Friends</h1>
+  <p class="lead"><em>Friends list loaded with a 3 second delay to simulate a long-running call to get data</em></p>
+</div>
+<div class="friends">
+  <ul *ngIf="friends">
+    <li *ngFor="let friend of friends">
+      <span>{{ friend.id }}</span> 
+      {{ friend.firstName }} {{ friend.lastName }}
+    </li>
+  </ul>
+  <h3>Add a new coding friend!</h3>
+  <app-person-editor-template></app-person-editor-template>
+</div>

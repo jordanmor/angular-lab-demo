@@ -1,0 +1,25 @@
+.animations,
+.animations > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animations > div {
+  width: 500px;
+  height: 500px;
+}
+
+.my-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  font-size: 2rem;
+  color: #fdfdfd;
+}
+
+.shape-selector {
+  text-align: center;
+}
