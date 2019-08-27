@@ -1,6 +1,13 @@
 <div class="jumbotron text-center">
-  <h1>Welcome to Jordan's Angular Lab!</h1>
-  <p class="lead">Where Angular dreams come true...</p>
+  <h1>TTS Angular Project</h1>
+  <p class="lead">A simple Angular app built using</p>
+  <p class="lead">routing, services, dependency injection, observables, forms and animation.</p>
 </div>
-<h3 class="text-center">After reviewing this app,</h3>
-<h3 class="text-center">please visit my <a href="https://github.com/jordanmor" alt="GitHub Account Jordan Mor">GitHub account.</a></h3>
+<div class="card-deck">
+  <a class="card" routerLink="{{ project.link }}" *ngFor="let project of projects">
+    <div class="card-body">
+      <h5 class="card-title">{{ project.title }}</h5>
+      <p class="card-text">{{ project.description }}</p>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,14 @@
+.lead {
+  margin-bottom: 0rem;
+}
+
+.card {
+  text-decoration: none;
+  color: #333;
+  transition: .3s ease-out;
+}
+
+.card:hover {
+  background-color: rgba(50,50,50,0.1);
+  transform: scale(1.01);
+}
