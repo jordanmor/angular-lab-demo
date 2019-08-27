@@ -1,13 +1,11 @@
 ## TTS Angular Project | [Live Demo](https://jordanmor.github.io/tts-angular-project/)
 
 **IMPORTANT PROJECT NOTE**: 
-- This Angular project is being further developed in it's own repository from a TTS class lab for better demonstration purposes.
-- The notes from the previous README file have been included below for context. 
-- For a history of the previous commits before moving the project to the current repo, please refer to [tts-js-assignments](https://github.com/jordanmor/tts-js-assignments). Please note that the lab was built as one of many exercises, so the commits referring to this lab are interspersed with commits from other assignments.
+- This Angular project has been moved to it's own repository from a TTS JavaScript assignments repo for better demonstration purposes.
+- For a history of the previous commits before moving the project to this current repo, please refer to [tts-js-assignments](https://github.com/jordanmor/tts-js-assignments). Please note that the lab was built as one of many exercises, so the commits referring to this lab are interspersed with commits from other assignments.
 
-### Part 1 - Angular Fundamentals - Routing, Services, Dependency Injection, Observables, Forms and Animation
+### Angular Fundamentals - Routing, Services, Dependency Injection, Observables, Forms and Animation
 
-Name: Jordan Mor  
 Assignment Title: Angular Services Lab-Homework Part 1 (Day 19 & 20)  
 Assigned: 8/15/19 - 8/16/19 (Day 19 & 20 Bootcamp - Week 4)   
 
@@ -40,7 +38,7 @@ Build a simple Angular app using routing, services, dependency injection, observ
 **Screenshot from my completed Angular Lab assignment**  
 <em>Friends list displayed using a service class, dependency injection, observables and a delay function that simulates a long-running call to get data from a server. A template-based form is used to add a new person to the list of coding friends when the form is submitted.</em>  
 
-![Angular Lab Screen Shot](angular-lab-screenshot.png)  
+![Angular Lab Screen Shot](angular-lab.gif)  
 
 ---
 
