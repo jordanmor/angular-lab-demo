@@ -9,6 +9,8 @@ import { Profile } from '../models/Profile';
 })
 export class ProfileEditorReactiveComponent {
 
+  jsonData: String;
+
   profileForm: FormGroup = this.builder.group({
     firstName: ['Gerard'],
     lastName: ['Butler'],
@@ -33,7 +35,7 @@ export class ProfileEditorReactiveComponent {
     this.profileForm.patchValue(updateProfile);
 
     // Send updated profile model data in JSON format to mock server to update db
-    console.log(JSON.stringify(this.profileForm.value));
+    this.jsonData = JSON.stringify(this.profileForm.value, null, 2);
     alert("Your profile information has been successfully updated.")
   }
 
