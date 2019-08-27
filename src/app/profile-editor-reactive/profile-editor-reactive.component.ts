@@ -9,7 +9,7 @@ import { Profile } from '../models/Profile';
 })
 export class ProfileEditorReactiveComponent {
 
-  jsonData: String;
+  mockJsonData: Profile;
 
   profileForm: FormGroup = this.builder.group({
     firstName: ['Gerard'],
@@ -23,7 +23,7 @@ export class ProfileEditorReactiveComponent {
   constructor(private builder: FormBuilder) {}
 
   updateProfile() {
-    const updateProfile: Profile = new Profile( 
+    const updatedProfile: Profile = new Profile( 
       this.profileForm.controls["firstName"].value,
       this.profileForm.controls["lastName"].value,
       this.profileForm.controls["username"].value,
@@ -32,10 +32,12 @@ export class ProfileEditorReactiveComponent {
       this.profileForm.controls["zip"].value,
     );
     
-    this.profileForm.patchValue(updateProfile);
+    this.profileForm.patchValue(updatedProfile);
 
     // Send updated profile model data in JSON format to mock server to update db
-    this.jsonData = JSON.stringify(this.profileForm.value, null, 2);
+    console.log(JSON.stringify(this.profileForm.value))
+    // Populate page with beautified, updated mock JSON data
+    this.mockJsonData = updatedProfile;
     alert("Your profile information has been successfully updated.")
   }
 
