@@ -6,7 +6,7 @@
     <div class="profile-wrapper container">
       <div class="row">
 
-        <div class="col-6">
+        <div class="col-md-6 mb-3">
             <div class="profile">
               <form [formGroup]="profileForm" class="mb-4">
                 <div class="form-group">
@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        <div class="data col-6">
+        <div class="data col-md-6">
           <h3 class="text-center mb-4">---- JSON Data ----</h3>
           <div *ngIf="mockJsonData" class="data-container">
             <p>{{ '{' }}</p>

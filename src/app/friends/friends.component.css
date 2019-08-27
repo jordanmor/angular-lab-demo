@@ -42,3 +42,22 @@ li span {
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 767px) {
+  .friends-form {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .friends-form h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .friends-form {
+    padding: 0 3rem;
+  }
+}
