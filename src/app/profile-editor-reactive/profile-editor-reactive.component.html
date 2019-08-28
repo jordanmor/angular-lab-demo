@@ -9,33 +9,68 @@
         <div class="col-md-6 mb-3">
             <div class="profile">
               <form [formGroup]="profileForm" class="mb-4">
+
                 <div class="form-group">
                   <label for="firstName">First Name</label>
                   <input type="text" formControlName="firstName" class="form-control" id="firstName" required>
                 </div>
+                <div [hidden]="profileForm.controls['firstName'].valid || profileForm.controls['firstName'].pristine"
+                  class="alert alert-danger">
+                  First Name is required
+                </div>
+
                 <div class="form-group">
                   <label for="lastName">Last Name</label>
-                  <input type="text" formControlName="lastName" class="form-control" id="lastName" >
+                  <input type="text" formControlName="lastName" class="form-control" id="lastName" required>
                 </div>
+                <div [hidden]="profileForm.controls['lastName'].valid || profileForm.controls['lastName'].pristine"
+                  class="alert alert-danger">
+                  Last Name is required
+                </div>
+
                 <div class="form-group">
                   <label for="username">Username</label>
-                  <input type="text" formControlName="username" class="form-control" id="username" >
+                  <input type="text" formControlName="username" class="form-control" id="username" required>
                 </div>
+                <div [hidden]="profileForm.controls['username'].valid || profileForm.controls['username'].pristine"
+                  class="alert alert-danger">
+                  Username is required
+                </div>
+
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input type="password" formControlName="password" class="form-control" id="password" >
+                  <input type="password" formControlName="password" class="form-control" id="password" required>
                 </div>
+                <div [hidden]="profileForm.controls['password'].valid || profileForm.controls['password'].pristine"
+                  class="alert alert-danger">
+                  Password is required
+                </div>
+
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" formControlName="email" class="form-control" id="email">
+                  <input type="email" formControlName="email" class="form-control" id="email" required email>
                 </div>
+                <div *ngIf="profileForm.controls['email'].invalid && !profileForm.controls['email'].pristine" class="error-msg">
+                  <div [hidden]="!profileForm.controls['email'].errors.required"
+                    class="alert alert-danger">
+                    Email is required
+                  </div>
+                  <div [hidden]="!profileForm.controls['email'].errors.patternInvalid"
+                    class="alert alert-danger">
+                    Email is invalid
+                  </div>
+                </div>
+
                 <div class="form-group">
                   <label for="zip">Zip Code</label>
                   <input type="text" formControlName="zip" class="form-control" id="zip" >
                 </div>
+
               </form>
+              
               <div class="update">
-                <button data-toggle="modal" data-target="#modal" type="button" class="btn btn-outline-primary" (click)="updateProfile()">Update Your Profile</button>
+                <button [disabled]="!profileForm.valid" 
+                  data-toggle="modal" data-target="#modal" type="button" class="btn btn-outline-primary" (click)="updateProfile()">Update Your Profile</button>
               </div>
             </div>
         </div>

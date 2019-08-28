@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Profile } from '../models/Profile';
 import { ModalService } from '../services/modal.service';
+import { patternValidator } from '../shared/pattern-validator';
 
 @Component({
   selector: 'app-profile-editor-reactive',
@@ -13,11 +14,14 @@ export class ProfileEditorReactiveComponent {
   mockJsonData: Profile;
 
   profileForm: FormGroup = this.builder.group({
-    firstName: ['Gerard'],
-    lastName: ['Butler'],
-    username: ['gbutler'],
-    password: ['1234'],
-    email: ['gbutler@gmail.com'],
+    firstName: ['Gerard', [Validators.required]],
+    lastName: ['Butler', [Validators.required]],
+    username: ['gbutler', [Validators.required]],
+    password: ['1234', [Validators.required]],
+    email: ['gbutler@gmail.com', [
+      Validators.required,
+      patternValidator(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+    ]],
     zip: ['90210']
   });
 
