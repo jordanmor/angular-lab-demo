@@ -1,13 +1,18 @@
 ## TTS Angular Project | [Live Demo](https://jordanmor.github.io/tts-angular-project/)
 
 **Short screencast of my completed Angular Lab assignment**  
-<em>Coding friends list displayed using a service class, dependency injection, observables and a delay function that simulates a long-running call to get data from a server. A template-based form is used to add a new person to the list of coding friends when the form is submitted.</em>  
+<em>Coding friends list displayed using a service class, dependency injection, observables and a delay function that simulates a long-running call to get data from a server. A template-based form with validation is used to add a new person to the list of coding friends when the form is submitted. A reactive form with validation is used to update a user's profile information and send the updated JSON data to a mock server.</em>  
 
-![Angular Lab Screen Shot](angular-lab.gif)
+![Angular Lab Screen Shot](angular-screencast.gif)
 
 **IMPORTANT PROJECT NOTE**: 
 - This Angular project has been moved here to it's own repository from a TTS JavaScript assignments repo for better demonstration purposes.
-- For a history of the previous commits before moving the project to this current repo, please refer to [tts-js-assignments](https://github.com/jordanmor/tts-js-assignments). Please note that the lab was built as one of many exercises, so the commits referring to this lab are interspersed with commits from other assignments.
+- **Additional features** have been added including: 
+  - template-driven form validation
+  - reactive form validation, including a custom email validator 
+  - a modal component and modal service shared by using dependency injection
+  - layout and styling improvements
+- For a history of the previous commits before moving the project to this current repo, please refer to [tts-js-assignments](https://github.com/jordanmor/tts-js-assignments). Please note that the lab was originally built as one of many exercises, so the past commits referring to this lab are interspersed with commits from other assignments.
 
 ---
 
@@ -50,12 +55,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Build live demo for GitHub
+Run `ng build --prod --output-path docs --base-href /tts-angular-project/` to build this project for hosting on GitHub Pages. The build artifacts will be stored in the `docs/` directory. Make a duplicate of the `index.html` file in the `docs` directory and rename it to `404.html`. Make sure to keep the `index.html` file.
+  
+Commit the `docs` directory to your GitHub repository named `tts-angular-project`. Go to the repo's settings and select the master branch/docs folder as the source of your GitHub page.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
