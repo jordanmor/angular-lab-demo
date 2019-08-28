@@ -7,6 +7,10 @@ h3 {
   margin: 0 auto;
 }
 
+.jumbotron p {
+  margin-bottom: .1rem;
+}
+
 form {
   max-width: 500px;
 }

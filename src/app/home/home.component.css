@@ -10,5 +10,4 @@
 
 .card:hover {
   background-color: rgba(50,50,50,0.1);
-  transform: scale(1.01);
 }
