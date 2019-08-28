@@ -12,6 +12,7 @@ import { FriendsComponent } from './friends/friends.component';
 import { PersonEditorTemplateComponent } from './person-editor-template/person-editor-template.component';
 import { AnimationsComponent } from './animations/animations.component';
 import { ProfileEditorReactiveComponent } from './profile-editor-reactive/profile-editor-reactive.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProfileEditorReactiveComponent } from './profile-editor-reactive/profil
     FriendsComponent,
     PersonEditorTemplateComponent,
     AnimationsComponent,
-    ProfileEditorReactiveComponent
+    ProfileEditorReactiveComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Profile } from '../models/Profile';
+import { ModalService } from '../services/modal.service';
 
 @Component({
   selector: 'app-profile-editor-reactive',
@@ -20,7 +21,9 @@ export class ProfileEditorReactiveComponent {
     zip: ['90210']
   });
 
-  constructor(private builder: FormBuilder) {}
+  constructor(
+    private builder: FormBuilder, 
+    private modal: ModalService ) {}
 
   updateProfile() {
     const updatedProfile: Profile = new Profile( 
@@ -38,7 +41,8 @@ export class ProfileEditorReactiveComponent {
     console.log(JSON.stringify(this.profileForm.value))
     // Populate page with beautified, updated mock JSON data
     this.mockJsonData = updatedProfile;
-    alert("Your profile information has been successfully updated.")
+    // Alert user that the profile information has been successfully updated
+    this.modal.setMessage(`The profile information for ${updatedProfile.firstName} ${updatedProfile.lastName} has been successfully updated.`);
   }
 
 }
