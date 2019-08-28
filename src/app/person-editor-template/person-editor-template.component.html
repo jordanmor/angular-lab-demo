@@ -1,20 +1,32 @@
 <div>
-  <form (ngSubmit)="onSubmit()" #personForm="ngForm">
-    <input type="text" style="display:none" 
-    [(ngModel)]="person.id" id="personId" name="id" #id="ngModel" required>
+  <form (ngSubmit)="onSubmit(personForm)" #personForm="ngForm">
+    <input type="text" [(ngModel)]="person.id"
+      style="display:none" id="personId" name="id" #id="ngModel" required>
     <div>
       <label for="firstName">First Name</label>
-      <input type="text" class="form-control"
-      [(ngModel)]="person.firstName" id="firstName" name="firstName" #firstName="ngModel" required>
+      <input type="text" [(ngModel)]="person.firstName"
+        class="form-control" id="firstName" name="firstName" #firstName="ngModel" required>
+    </div>
+    <div [hidden]="firstName.valid || firstName.pristine"
+        class="alert alert-danger">
+      First Name is required
     </div>
 
     <div class="form-group">
       <label for="lastName">Last Name</label>
-      <input type="text" class="form-control"
-      [(ngModel)]="person.lastName" id="lastName" name="lastName" #lastName="ngModel" required>
+      <input type="text" [(ngModel)]="person.lastName"
+        class="form-control" id="lastName" name="lastName" #lastName="ngModel" required>
     </div>
 
-    <button data-toggle="modal" data-target="#modal" class="btn btn-primary" type="submit">Submit</button>
+    <div [hidden]="lastName.valid || lastName.pristine"
+        class="alert alert-danger">
+          Last name is required
+    </div>
+
+    <button [disabled]="!personForm.form.valid"
+      data-toggle="modal" data-target="#modal" class="btn btn-primary" type="submit">
+      Submit
+    </button>
 
   </form>
 </div>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Person } from '../models/Person';
 import { FRIENDS } from '../data/friends';
 import { ModalService } from '../services/modal.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-person-editor-template',
@@ -18,15 +19,16 @@ export class PersonEditorTemplateComponent {
     return FRIENDS.length + 1;
   }
 
-  onSubmit() {
+  onSubmit(form: NgForm) {
     // Add new friend from form submission
     FRIENDS.push(this.person);
 
     // Alert user of successful form submission
     this.modal.setMessage(`You successfully added ${this.person.firstName} ${this.person.lastName} to the list.`);
 
-    // Reset form model - include next friend id
+    // Reset form model and form - include next friend id
     this.person = new Person(this.getNextId(), '', '');
+    form.resetForm(this.person);
   }
 
 }
