@@ -61,7 +61,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Build live demo for GitHub
 Run `ng build --prod --output-path docs --base-href /tts-angular-project/` to build this project for hosting on GitHub Pages. The build artifacts will be stored in the `docs/` directory. Make a duplicate of the `index.html` file in the `docs` directory and rename it to `404.html`. Make sure to keep the `index.html` file.
-  
-Commit the `docs` directory to your GitHub repository named `tts-angular-project`. Go to the repo's settings and select the master branch/docs folder as the source of your GitHub page.
+
+Commit the `docs` directory to your GitHub repository named `tts-angular-project`. Go to the repo's settings and select the `master branch/docs` folder as the source of your GitHub page.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
