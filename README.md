@@ -49,19 +49,37 @@ Build a simple Angular app using routing, services, dependency injection, observ
 
 ---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+### Installation Instructions
 
-## Development server
+1. If you do not already have the Angular CLI installed, then install it globally using the following command:  
+`npm install -g @angular/cli`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2. git clone `https://github.com/jordanmor/tts-angular-project`
 
-## Build
+3. Go to the workspace folder `tts-angular-project`
+
+4. Run `npm install`
+
+### Usage Instructions
+
+**Run the application**
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.  
+
+You can optionally launch the server and automatically open a browser window by using the CLI command `ng serve --open`
+
+**Build**
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Build live demo for GitHub
+**Build live demo for GitHub**  
+
 Run `ng build --prod --output-path docs --base-href /tts-angular-project/` to build this project for hosting on GitHub Pages. The build artifacts will be stored in the `docs/` directory. Make a duplicate of the `index.html` file in the `docs` directory and rename it to `404.html`. Make sure to keep the `index.html` file.
 
 Commit the `docs` directory to your GitHub repository named `tts-angular-project`. Go to the repo's settings and select the `master branch/docs` folder as the source of your GitHub page.
 
+**Additional information**  
+
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
